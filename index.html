@@ -7,7 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- We need to ensure the other styles are loaded before our stylesheet utilizes them -->
   <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+ <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">-->
   <title>Weather Dashboard</title>
 </head>
 
@@ -17,8 +18,9 @@
         <i class="fa-solid fa-cloud-sun-rain"></i>Weather Dashboard
     </h1>
   </header>
-  <main class="flex-row justify-space-between">
-    <div class="col-12 col-md-4">
+  <main class="flex-column justify-space-between">
+   
+    <div class="col-12 col-md-4" id="search-panel">
       <div class="card">
         <h3 class="card-header text-uppercase">Search for the city</h3>
         <form id="search-form" class="card-body">
@@ -26,7 +28,7 @@
           <button type="submit" class="btn">Search</button>
         </form>
       </div>
-      <div id="search-history">
+      <div id="search-history" style="background-color: red;"> Search History:
 
       </div>
     </div>
@@ -34,19 +36,21 @@
     <div class="col-12 col-md-8" id="forecast-container">
           <!-- A container for current forecast -->
         <div>
-            <h1>City Name</h1>
+            <h1 id="city-name"></h1>
+            <h2 id="time"></h2>
             <ul id="current-forecast">
-                <li>Wind: <span id="wind"></span></li>
+                <li>Wind: <span id="wind">Wind</span></li>
                 <li>Temp: <span id="temp"></span></li>
                 <li>Humiduty: <span id="humidity"></span></li>
             </ul>
         </div>
       <!-- Empty HTML element for us to write forecast data to. -->
-      <div id="five-day-forecast" class="list-group"></div>
+      <div id="five-day-forecast">5 day Forecast:</div>
     </div>
   </main>
 
   <script src="./assets/js/script.js"></script>
+  <script src="https://kit.fontawesome.com/48f00952d3.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
