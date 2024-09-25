@@ -28,7 +28,7 @@ searchFormEl.addEventListener('submit',formSubmitHandler);
 //first get city coordinates from the api to use them later to build a weather api url
 const getCoordinates = function (city) {
   fiveDayForecastEl.innerHTML = '';
-  const  geocodingApiUrl=`http://api.openweathermap.org/geo/1.0/direct?q=${city},US&limit=1&appid=${apiKey}`
+  const  geocodingApiUrl=`https://api.openweathermap.org/geo/1.0/direct?q=${city},US&limit=1&appid=${apiKey}`
    fetch (geocodingApiUrl)
       .then(function (response) {
         if (response.ok) {
