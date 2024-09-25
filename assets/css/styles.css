@@ -1,3 +1,6 @@
+body {
+--bs-body-bg
+}
 #forecast-container {
     display: flex;
     flex-direction: column;
